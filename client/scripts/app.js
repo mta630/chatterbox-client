@@ -1,4 +1,6 @@
 window.currentRoom = "hrr45";
+window.allRooms = [];
+window.friendsList = [];
 
 var App = {
 
@@ -38,5 +40,14 @@ var App = {
   stopSpinner: function() {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
+  },
+
+  renderMessages : () => {
+    MessagesView.render();
+  },
+
+  sendToServer: (message, successCB, failureCB) => {
+    Parse.create(message, successCB, failureCB);
   }
+
 };

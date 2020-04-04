@@ -8,6 +8,7 @@ var Rooms = {
        var roomName = mainArray[key].roomname;
 
        if (allRooms.indexOf(roomName) === -1 && roomName) {
+        window.allRooms.push(`${roomName}`);
         allRooms += `<option val="${roomName}">${roomName}</option>`;
        }
 

@@ -12,6 +12,7 @@
     <script>jQuery(document).ready(function() {
       jQuery("time.timeago").timeago();
     });</script>
+    <script>$(document).ready(testFunction = function (userName) {Friends.befriend(userName)})</script>
     <script>
       // DO NOT MODIFY THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -29,23 +30,25 @@
   </head>
   <body>
     <div id="main">
-      <h1>chatterbox</h1>
-      <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
-      <div class="rooms">
-        Room:
-        <select type="roomSelect" id="roomSelect">
-        </select>
-        <button>Add Room</button>
-        <input type="text" class="addroom">
+      <div id="title">
+        <h1>chatterbox.</h1>
       </div>
-      <form action="#" id="send" method="post">
-        <input type="text" name="message" id="message"/>
-        <input type="submit" name="submit" class="submit"/>
-      </form>
+      <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
+      </div>
     </div>
 
-    <div id="room-title">hrr45</div>
+    <div class="rooms">
+        <select type="roomSelect" id="roomSelect"><option value="choose-room" selected>Choose Room</option></select>
+    hrr45</div>
+    <form action="#" id="new-room" method="post">
+      <input type="text" name="new-room" class="new-room" id="new-room-id">
+      <button class="add-room-button">Add Room</button>
+    </form>
     <div id="chats"></div>
+    <form action="#" id="send" method="post">
+        <input type="text" name="message" id="message"/>
+        <input type="submit" name="submit" class="submit"/>
+    </form>
     <script src="client/env/config.js"></script>
     <script src="client/scripts/parse.js"></script>
     <script src="client/scripts/rooms.js"></script>
@@ -59,33 +62,5 @@
     <script>
       $(() => App.initialize());
     </script>
-    <div class="container">
-      <div class="msg-header">
-          <div class="msg-header-img">
-          </div>
-          <div class="active">
-            <h4>username here</h4>
-            <h6>timestamp here</h6>
-          </div>
-      </div>
-          <div class ="chat-page">
-            <div class="msg-inbox">
-              <div class="chats-2">
-                <div class ="msg-page">
-                <div class ="received-chats">
-                <div class ="received-chats-img">
-                <img src="SOURCE-IMAGE-FROM-POOL-HERE">
-                </div>
-                  <div class="received-msg">
-                    <div class="received-msg-inbox">
-                      <p>Hello, this is where messages will go.</p>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
   </body>
 </html>

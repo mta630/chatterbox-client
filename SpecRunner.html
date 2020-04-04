@@ -9,6 +9,7 @@
   <script src="node_modules/mocha/mocha.js"></script>
   <script src="node_modules/chai/chai.js"></script>
   <script src="node_modules/sinon/pkg/sinon.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
   <script>
     mocha.setup('bdd');
     var expect = chai.expect;
@@ -26,7 +27,7 @@
     <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
     <div id="rooms">
       Room:
-      <select></select>
+      <select class="custom-select"><i class="fas fa-angle-double-down"></i></select>
       <button>Add Room</button>
     </div>
     <form action="#" id="send" method="post">
@@ -53,5 +54,20 @@
 <script src="client/scripts/messagesView.js"></script>
 <script src="client/scripts/app.js"></script>
 
+<div class = "chatbox">
+  <div class= "chatlogs">
+    <div class="chat">
+      <div class="user-name">
+
+      </div>
+    </div>
+  </div>
+
+  <div class= "chat-form">
+    <textarea></textarea>
+    <button>Send</button>
+  </div>
+
+</div>
 </body>
 </html>

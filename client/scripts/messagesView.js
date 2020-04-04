@@ -25,11 +25,12 @@ var MessagesView = {
       var allMessages = '';
       for (var key in mainArray) {
         var userName = mainArray[key].username;
-        var text = JSON.stringify(mainArray[key].text);
+        var text = mainArray[key].text;
         var createdAt = mainArray[key].createdAt;
         var timeISO = jQuery.timeago(createdAt);
         var roomName = mainArray[key].roomname;
         var regex = /(<script>)/g;
+        $("#roomSelect").val("choose-room");
 
         if (userName) {
           if (userName.indexOf('<script>') !== -1) {
@@ -42,22 +43,29 @@ var MessagesView = {
             text = text.replace(regex, 'lmao nice try');
           }
         }
-        if (roomName === window.currentRoom && userName && text && createdAt) {
-          // add some shit to the timeline
 
-          allMessages += `<div class= 'individual-message'><p><span id="username-format">${userName}</span><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
-
+        if (roomName) {
+          if (roomName.indexOf('<script>') !== -1) {
+            roomName = roomName.replace(regex, 'lmao nice try');
+          }
         }
 
+        if (roomName === window.currentRoom && userName && text && createdAt) {
+          // add some shit to the timeline
+          if (window.friendsList.indexOf(userName)=== -1) {
+            allMessages += `<div class= 'individual-message'><p><span id="username-format" onclick="testFunction('${userName}')" val="${userName}">${userName}</span><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
+          } else {
+            console.log('found a friend  ')
+            allMessages += `<div class= 'individual-message'><p><span id="friend-format")" val="${userName}">${userName}</span><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
+          }
+        }
       }
 
       $('#chats').append(allMessages);
+      Friends.initialize();
     });
   }
 
-
-
-  //TO DO : CREATE A FUNCTION TO SHOW MESSAGES BASED ON ROOM NAME
 
 };
 

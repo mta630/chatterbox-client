@@ -5,7 +5,6 @@ var RoomsView = {
 
   initialize: function() {
     var store = Rooms.findRooms();
-    console.log(store);
     return store;
   },
 
