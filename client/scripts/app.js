@@ -44,6 +44,7 @@ var App = {
 
   renderMessages : () => {
     MessagesView.render();
+    console.log('refreshed');
   },
 
   sendToServer: (message, successCB, failureCB) => {

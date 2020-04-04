@@ -1,44 +1,53 @@
 body {
-    background: #eee;
+    background: #49A0C9;
     text-align: center;
     padding: 0 25px;
     font-family: sans-serif;
 }
 
 #main, #chats {
-    width: 500px;
+    width: 900px;
     margin: auto;
     text-align: left;
-    background: white;
+    background: #39a0ca;
     padding: 50px 60px;
-    border: solid #ddd;
     border-width: 0 1px 1px 1px;
+}
+
+button {
+    background-color: #49A0C9;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+    vertical-align: top;
+}
+
+button:hover {
+    background-color: #1D3461;
 }
 
 #main {
     height: 200px;
+    background: #49A0C9;
 }
 
 #chats {
-    height: 500px;
+    height: 400px;
     margin: auto;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
 .rooms {
-    width: 500px;
+    width: 900px;
     margin: auto;
-    background: #262626;
+    background: #49A0C9;
     color: white;
-    padding: 50px 60px;
 }
 
-p {
-    margin-top: 0;
+.individual-message p {
     font-size: 10px;
-    margin-bottom: 1rem;
-    background-color: #6b6b6b;
+    background-color: #376996;
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
     color: white;
@@ -50,7 +59,9 @@ p {
     margin-bottom: 5px;
     padding: 5px;
     letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-family: 'Flamenco', cursive;
+    color: whitesmoke
 }
 
 #main #title {
@@ -84,19 +95,31 @@ p {
 }
 
 form {
-    padding: 20px;
-    padding-left: 0;
     margin-bottom: 20px;
-    width: 500px;
-    background-color: #262626;
-    margin: auto;
+    width: 900px;
+    margin: 10px auto;
 }
 
 form input[type=text] {
     margin-right: 10px;
     width: 90%;
     font-size: 12px;
-    padding: 5px;
+}
+
+#send form {
+    height: 100px;
+}
+.room-header {
+    width: 900px;
+    height: 60px;
+    margin: auto;
+    background-color: #1F487E;
+    font-family: 'Flamenco', cursive;
+    color: white;
+}
+
+.room-header p{
+    font-size: 30px;
 }
 
 .chat {
@@ -132,12 +155,12 @@ form input[type=text] {
 
 .spinner {
     float: right;
-    height: 46px;
-    margin-bottom: 5px;
+    height: 5px;
+    margin-bottom: auto;
 }
 
 .spinner img {
-    padding: 10px;
+    padding: 5px;
 }
 
 .friend {
@@ -199,42 +222,51 @@ form input[type=text] {
 form input[type=text]{
     background: #fbfbfb;
     width: 60%;
-    height: 50px;
+    height: 30px;
     border: 2px solid #eee;
     border-radius: 3px;
     resize: none;
-    padding: 10px;
     font-size: 18px;
     color: black;
 }
 
 form input[type=text]:focus {
     background: #fff
+    vertical-align: middle;
 }
 
 form input[type=text]::-webkit-scrollbar {
     width: 10px;
+    vertical-align: middle;
 }
 
 form input[type=text]::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: rgba(0,0,0,.1);
+    vertical-align: middle;
 }
+
 form input[type=submit] {
     font-family: sans-serif;
     background: #8e8e8e;
-    padding: 5px 15px;
+    height: 30px;
     font-size: 30px;
     color: #fff;
     border: none;
-    margin: 0 10px;
     border-radius: 3px;
     box-shadow: 0 3px 0 black;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .chat-form form input[type=submit]:hover {
     background: black;
+    vertical-align: middle;
+}
+
+#roomSelect {
+    text-align-last: center;
+    width: 40%
 }
 
 /*
@@ -248,4 +280,19 @@ select {
     -moz-appearance: none;
     appearance: none;       /* Remove default arrow */
     background-image: url(...);   /* Add custom arrow */
+    border: none;
+    border-radius: 3px;
  }
+
+input {
+    vertical-align: top;
+}
+
+input, #new-room, .new-room {
+    margin: none;
+    width: 30%;
+}
+
+p, #room-title {
+    margin-top: 2rem;
+}

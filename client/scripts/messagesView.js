@@ -56,7 +56,7 @@ var MessagesView = {
             allMessages += `<div class= 'individual-message'><p><span id="username-format" onclick="testFunction('${userName}')" val="${userName}">${userName}</span><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
           } else {
             console.log('found a friend  ')
-            allMessages += `<div class= 'individual-message'><p><span id="friend-format")" val="${userName}">${userName}</span><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
+            allMessages += `<div class= 'individual-message'><p><span id="friend-format")" val="${userName}">${userName} </span><i class="fas fa-user-friends"></i><span class='date-format'>${timeISO}</span><br/>${text}</p><div>`;
           }
         }
       }
