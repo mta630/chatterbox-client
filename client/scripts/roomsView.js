@@ -4,9 +4,13 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
+    var store = Rooms.findRooms();
+    console.log(store);
+    return store;
   },
 
   render: function() {
   }
+
 
 };

@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>chatterbox</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="client/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/underscore/underscore.js"></script>
     <script>
@@ -27,7 +29,7 @@
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
+        <select id="roomSelect"></select>
         <button>Add Room</button>
       </div>
       <form action="#" id="send" method="post">
@@ -35,6 +37,7 @@
         <input type="submit" name="submit" class="submit"/>
       </form>
     </div>
+
     <div id="chats"></div>
     <script src="client/env/config.js"></script>
     <script src="client/scripts/parse.js"></script>
@@ -49,5 +52,33 @@
     <script>
       $(() => App.initialize());
     </script>
+    <div class="container">
+      <div class="msg-header">
+          <div class="msg-header-img">
+          </div>
+          <div class="active">
+            <h4>username here</h4>
+            <h6>timestamp here</h6>
+          </div>
+      </div>
+          <div class ="chat-page">
+            <div class="msg-inbox">
+              <div class="chats-2">
+                <div class ="msg-page">
+                <div class ="received-chats">
+                <div class ="received-chats-img">
+                <img src="SOURCE-IMAGE-FROM-POOL-HERE">
+                </div>
+                  <div class="received-msg">
+                    <div class="received-msg-inbox">
+                      <p>Hello, this is where messages will go.</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
   </body>
 </html>
