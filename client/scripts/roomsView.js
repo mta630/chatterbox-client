@@ -12,5 +12,6 @@ var RoomsView = {
   render: function() {
   }
 
+  //TO DO : 'CREATE ROOM' BUTTON
 
 };

@@ -9,14 +9,21 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-
-    console.log('click!');
     // send typed message to server
-    var message = $('#message').val();
-    console.log(window.location.search);
+    var getText = $('#message').val();
     var searchLocation = window.location.search;
     var user = searchLocation.substring(searchLocation.indexOf('=') + 1);
-    console.log(user);
+
+    var postMessage = {
+      username: user,
+      text: getText,
+      roomname: window.currentRoom
+    };
+
+    Parse.create(postMessage, MessagesView.render(), () => console.log('MY PONY IS DOWN'));
+
+
+
   },
 
   setStatus: function(active) {

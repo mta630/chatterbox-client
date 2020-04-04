@@ -1,4 +1,8 @@
+window.currentRoom = "hrr45";
+
 var App = {
+
+   // As the general room at initialization
 
   $spinner: $('.spinner img'),
 
