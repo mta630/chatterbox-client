@@ -14,7 +14,7 @@ var MessagesView = {
     // get value from the select event
     // var input = $('#message').val();
     window.currentRoom = $('#roomSelect').val();
-    $('#room-title').html(window.currentRoom);
+    $('#room-title').html(`<span id="currentRoom">You are currently in room: </span><span id="room-title-animate">${window.currentRoom}</span>`);
     MessagesView.render();
   },
 

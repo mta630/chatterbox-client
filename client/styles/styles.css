@@ -1,5 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background: #49A0C9;
+    height: 100%;
+    /* background: #49A0C9; */
+    background: #82d0f5;
     text-align: center;
     padding: 0 25px;
     font-family: sans-serif;
@@ -9,25 +16,27 @@ body {
     width: 900px;
     margin: auto;
     text-align: left;
-    background: #39a0ca;
-    padding: 50px 60px;
+    background: inherit;
+    padding: none;
     border-width: 0 1px 1px 1px;
 }
 
 button {
-    background-color: #49A0C9;
+    width: 5em;
+    background-color: inherit;
     border: 1px solid white;
     color: white;
     border-radius: 3px;
     vertical-align: top;
 }
 
-button:hover {
-    background-color: #1D3461;
+button:hover,
+.submit:hover {
+    background-color: #de5c33;
 }
 
 #main {
-    height: 200px;
+    height: 20%;
     background: #49A0C9;
 }
 
@@ -41,12 +50,12 @@ button:hover {
 .rooms {
     width: 900px;
     margin: auto;
-    background: #49A0C9;
+    background: inherit;
     color: white;
 }
 
 .individual-message p {
-    font-size: 10px;
+    font-size: 1rem;
     background-color: #376996;
     border-radius: 5px;
     padding: 10px 10px 10px 10px;
@@ -61,11 +70,12 @@ button:hover {
     letter-spacing: 1px;
     font-weight: 300;
     font-family: 'Flamenco', cursive;
-    color: whitesmoke
+    color: #003444;
 }
 
 #main #title {
     padding: 20px;
+    background: #82d0f5;;
 }
 
 #main h1 span {
@@ -113,7 +123,7 @@ form input[type=text] {
     width: 900px;
     height: 60px;
     margin: auto;
-    background-color: #1F487E;
+    /* background-color: #1F487E; */
     font-family: 'Flamenco', cursive;
     color: white;
 }
@@ -221,13 +231,13 @@ form input[type=text] {
 
 form input[type=text]{
     background: #fbfbfb;
-    width: 60%;
-    height: 30px;
-    border: 2px solid #eee;
+    width: 50%;
+    height: 10%;
     border-radius: 3px;
     resize: none;
     font-size: 18px;
     color: black;
+    padding-top: .25rem;
 }
 
 form input[type=text]:focus {
@@ -247,16 +257,12 @@ form input[type=text]::-webkit-scrollbar-thumb {
 }
 
 form input[type=submit] {
-    font-family: sans-serif;
-    background: #8e8e8e;
-    height: 30px;
-    font-size: 30px;
-    color: #fff;
-    border: none;
+    width: 6rem;
+    background-color: inherit;
+    border: 1px solid white;
+    color: white;
     border-radius: 3px;
-    box-shadow: 0 3px 0 black;
-    cursor: pointer;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .chat-form form input[type=submit]:hover {
@@ -266,7 +272,11 @@ form input[type=submit] {
 
 #roomSelect {
     text-align-last: center;
-    width: 40%
+    width: 40%;
+    border: 1px solid white;
+    border-radius: 3px;
+    background: #de5c33;
+    color: white;
 }
 
 /*
@@ -276,10 +286,10 @@ form input[type=submit] {
 /* The container must be positioned relative: */
 
 select {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;       /* Remove default arrow */
-    background-image: url(...);   /* Add custom arrow */
+    appearance: none; */
+    background-image: url('arrow1.png');
     border: none;
     border-radius: 3px;
  }
@@ -289,10 +299,35 @@ input {
 }
 
 input, #new-room, .new-room {
-    margin: none;
-    width: 30%;
+    border: none;
+    width: 30em;
 }
 
-p, #room-title {
-    margin-top: 2rem;
+#room-title {
+    margin: none 10px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    vertical-align: middle;
+    color: black;
+    font-weight: 700;
+}
+
+#currentRoom {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+@keyframes fadeIn{
+    0%{
+        opacity: .5;
+        color: #403c3c;
+        }
+    100%{
+        opacity: 1;
+        }
+}
+
+#room-title-animate {
+    animation: fadeIn 0.75s 1 0s linear;
 }

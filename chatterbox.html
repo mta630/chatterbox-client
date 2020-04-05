@@ -30,6 +30,10 @@
         window.location.search = search;
       }
     </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+    </style>
+
   </head>
   <body>
     <div id="main">
@@ -49,7 +53,7 @@
       </form>
     </div>
     <div class="room-header">
-      <p id="room-title">HRR45</p>
+      <p id="room-title"><span id="currentRoom">You are currently in room:</span> <span id="room-title-animate">HRR45</span></p>
     </div>
     <div id="chats"><div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div></div>
     <form action="#" id="send" method="post">
